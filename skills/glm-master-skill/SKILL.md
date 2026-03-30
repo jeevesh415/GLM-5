@@ -52,6 +52,12 @@ This is a **documentation-only** master skill.
 | `glmv-caption` | Image/video/file captioning | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-caption |
 | `glmv-prompt-gen` | Prompt generation from visual input | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-prompt-gen |
 | `glmv-resume-screen` | Resume screening | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-resume-screen |
+| `glmv-grounding` | Image/video target localization & bounding-box visualization | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-grounding |
+| `glmv-doc-based-writing` | Document-based content generation (PDF/DOCX) | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-doc-based-writing |
+| `glmv-pdf-to-ppt` | PDF to HTML presentation conversion | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-pdf-to-ppt |
+| `glmv-pdf-to-web` | PDF to academic project website conversion | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-pdf-to-web |
+| `glmv-prd-to-app` | Build full-stack web app from PRD documents & prototypes | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-prd-to-app |
+| `glmv-web-replication` | Frontend visual replication of public websites | https://github.com/zai-org/GLM-V/tree/main/skills/glmv-web-replication |
 
 ---
 
@@ -74,7 +80,7 @@ npx clawhub@latest install glm-image-generation
 You can also install multiple skills at once:
 
 ```bash
-npx clawhub@latest install glmocr glmocr-table glmocr-formula glmocr-handwriting glm-image-generation glmv-caption glmv-prompt-gen glmv-resume-screen
+npx clawhub@latest install glmocr glmocr-table glmocr-formula glmocr-handwriting glm-image-generation glmv-caption glmv-prompt-gen glmv-resume-screen glmv-grounding glmv-doc-based-writing glmv-pdf-to-ppt glmv-pdf-to-web glmv-prd-to-app glmv-web-replication
 ```
 
 ### Method B: If Clawhub is rate-limited
