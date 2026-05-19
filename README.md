@@ -60,16 +60,16 @@ vLLM, SGLang, xLLM and Ktransformers all support local deployment of GLM-5 serie
 
     Using Docker as:
     ```shell
-    docker pull vllm/vllm-openai:glm51
-    docker pull vllm/vllm-openai:glm51-cu130 # For CUDA 13.0
+    docker pull vllm/vllm-openai:v0.20.2-cu129
+    docker pull vllm/vllm-openai:v0.20.2 # For CUDA 13.0
     ```
 
 + SGLang
 
     Using Docker as:
     ```bash
-    docker pull lmsysorg/sglang:v0.5.10
-    docker pull lmsysorg/sglang:v0.5.10-cu130 # For CUDA 13.0
+    docker pull lmsysorg/sglang:v0.5.11
+    docker pull lmsysorg/sglang:v0.5.11-cu130 # For CUDA 13.0
     ```
 
 ### Deploy
@@ -94,7 +94,7 @@ vLLM, SGLang, xLLM and Ktransformers all support local deployment of GLM-5 serie
 + SGLang
 
     ```shell
-    SGLANG_ENABLE_SPEC_V2=1 sglang serve \
+    sglang serve \
         --model-path zai-org/GLM-5.1-FP8 \
         --tp-size 8 \
         --tool-call-parser glm47  \
@@ -104,7 +104,9 @@ vLLM, SGLang, xLLM and Ktransformers all support local deployment of GLM-5 serie
         --speculative-eagle-topk 1 \
         --speculative-num-draft-tokens 4 \
         --mem-fraction-static 0.85 \
-        --served-model-name glm-5.1-fp8
+        --served-model-name glm-5.1-fp8 \
+        --port 8000 \
+        --host 0.0.0.0
     ```
 
     Check the [sglang cookbook](https://cookbook.sglang.io/autoregressive/GLM/GLM-5.1) for more details.
